@@ -2,7 +2,8 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
-const Intern = require('./lib/intern')
+const Intern = require('./lib/intern');
+const generate = require('./src/page-template')
 
 let employeeList = [];
 
@@ -137,7 +138,7 @@ const teamGenerator = () => {
 }
 
 const writeToFile = (fileName, employeeList) => {
-    fs.writeFileSync(fileName, generateHTML(employeeList))
+    fs.writeFileSync(fileName, generate(employeeList))
 }
 
 const init = () => {
