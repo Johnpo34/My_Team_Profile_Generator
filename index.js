@@ -105,6 +105,10 @@ const internGenerator = () => {
         })
 }
 
+const writeToFile = (fileName, employeeList) => {
+    fs.writeFileSync(fileName, generate(employeeList))
+}
+
 const addMoreTeamMembers = () => {
     inquirer.prompt(addTeamMembers)
         .then((addTeamData) => {
@@ -114,15 +118,10 @@ const addMoreTeamMembers = () => {
             else if (addTeamData.addTeam === 'Intern') {
                 internGenerator()
             }
-            else if (addTeamData.addTeam === 'None.') {
+            else if (addTeamData.addTeam === 'None') {
                 console.log('finished team')
                 employeeList.forEach(employee => {
-                    writeToFile('employeeList.html', (employeeList), err => {
-                        if (err) {
-                            console.log(err);
-                        }
-                        console.log('Successfully made team')
-                    })
+                    writeToFile(__dirname + '/employeeList.html', (employeeList))
                 })
             }
         })
@@ -137,9 +136,7 @@ const teamGenerator = () => {
         })
 }
 
-const writeToFile = (fileName, employeeList) => {
-    fs.writeFileSync(fileName, generate(employeeList))
-}
+
 
 const init = () => {
     teamGenerator()

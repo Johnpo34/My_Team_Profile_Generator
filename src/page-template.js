@@ -1,15 +1,35 @@
-function generateTeam(team){
-    function generateManager(manager){
-        return ``
+function generateTeam(team) {
+    let page = ""
+    team.forEach(teamMember => {
+        if (teamMember.officeNumber != null) {
+            page += generateManager(teamMember)
+        }
+        if (teamMember.github != null) {
+            page += generateEngineer(teamMember)
+        }
+        if (teamMember.school != null) {
+            page += generateIntern(teamMember)
+        }
+    })
+    function generateManager(manager) {
+        return `<div>Name ${manager.name}</div>
+                <div>Office Number${manager.officeNumber}</div>
+                <div>Email ${manager.email}</div>
+                <div>Id number ${manager.id}</div>`
     }
-    function generateEngineer(engineer){
-        return ``
+    function generateEngineer(engineer) {
+        return `<div>Name ${engineer.name}</div>
+        <div>github${engineer.github}</div>
+        <div>Email ${engineer.email}</div>
+        <div>Id number ${engineer.id}</div>`
     }
-    function generateIntern(intern){
-        return ``
+    function generateIntern(intern) {
+        return `<div>Name ${intern.name}</div>
+        <div>School Name${intern.school}</div>
+        <div>Email ${intern.email}</div>
+        <div>Id number ${intern.id}</div>`
     }
-    const page = []
-    page.push(team)
+    return page;
 }
 module.exports = team => {
     return `<!DOCTYPE html>
