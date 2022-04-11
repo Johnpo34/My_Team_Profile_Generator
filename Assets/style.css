@@ -3,14 +3,17 @@
     padding-bottom: 5%;
     margin-bottom: 8%;
     text-align: center;
-    background-color: var(--primary);
+    background-color: red;
     border: 8px solid black;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     }
 
 .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-bottom: 8%;
     font-size: 18px;
     border: 5px solid black;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }

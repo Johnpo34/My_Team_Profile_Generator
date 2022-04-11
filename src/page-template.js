@@ -12,7 +12,8 @@ function generateTeam(team) {
         }
     })
     function generateManager(manager) {
-        return `<div class="card" style="width: 18rem">
+        return `<div class="card" style="width: 22rem">
+                <h1> Manager </h1>
                 <div>Name: ${manager.name}</div>
                 <div>Office Number: ${manager.officeNumber}</div>
                 <div>Email: ${manager.email}</div>
@@ -20,7 +21,8 @@ function generateTeam(team) {
                 </div>`
     }
     function generateEngineer(engineer) {
-        return `<div class="card" style="width: 18rem">
+        return `<div class="card" style="width: 22rem">
+        <h2> Engineer <h2>
         <div>Name: ${engineer.name}</div>
         <div>github: ${engineer.github}</div>
         <div>Email: ${engineer.email}</div>
@@ -28,7 +30,8 @@ function generateTeam(team) {
         </div>`
     }
     function generateIntern(intern) {
-        return `<div class="card" style="width: 18rem">
+        return `<div class="card" style="width: 22rem">
+        <h3> Intern <h3>
         <div>Name: ${intern.name}</div>
         <div>School Name: ${intern.school}</div>
         <div>Email: ${intern.email}</div>
@@ -51,9 +54,9 @@ module.exports = team => {
     <body>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <hi class="display-4">Team</h1>
+                <hi class="display-4">My Teams Profiles</h1>
             </div>
-        </div
+        </div>
         ${generateTeam(team)}
     </body>
     </html>`
