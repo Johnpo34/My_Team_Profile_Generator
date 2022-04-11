@@ -7,7 +7,7 @@ This application is for someone to generate their teams profile to include a pro
 https://github.com/Johnpo34/Team_Profiles
 
 # walkthrough video URL
-
+https://drive.google.com/file/d/18iR8mib5wXTVfPQzkHJbwyvRnjX9Bn2Q/view
 
 # Screenshot.
 
